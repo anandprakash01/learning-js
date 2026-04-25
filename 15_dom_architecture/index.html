@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enterprise DOM Architecture</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+        background: #1e1e1e;
+        color: #fff;
+      }
+      .box {
+        padding: 10px;
+        margin: 5px;
+        background: #333;
+        border: 1px solid #555;
+      }
+    </style>
+
+    <script defer src="./01_selection_and_nodes.js"></script>
+    <script src="./02_traversal_and_manipulation.js" defer></script>
+    <script src="./03_event_listeners.js" defer></script>
+    <script src="./04_event_delegation.js" defer></script>
+    <script src="./05_reflow_and_repaint.js" defer></script>
+  </head>
+  <body>
+    <div id="main-dashboard">
+      <h1>Server Status: ONLINE</h1>
+    </div>
+
+    <button class="btn-primary">Save Config</button>
+    <button class="btn-primary">Deploy Server</button>
+
+    <hr />
+
+    <form class="form-group">
+      <input type="text" placeholder="Admin Username" />
+      <button id="submit-btn" type="submit">Submit Login</button>
+    </form>
+
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#settings">Settings</a></li>
+      </ul>
+    </nav>
+
+    <hr />
+    <button id="toggle-anim" class="btn-primary">Toggle Hardware Animation</button>
+    <div id="box-container">
+      <div class="box">Server Node 1</div>
+      <div class="box">Server Node 2</div>
+      <div class="box">Server Node 3</div>
+    </div>
+
+    <hr />
+    <div id="server-rack">
+      <h2>Primary Rack</h2>
+      <ul id="node-list">
+        <li class="active-node">Node Alpha</li>
+        <li>Node Beta</li>
+        <li>Node Gamma</li>
+      </ul>
+    </div>
+
+    <hr />
+    <div id="database-grid">
+      <h3>Active Database Connections</h3>
+      <ul id="connection-list">
+        <li>Connection 1 <button class="delete-btn" data-id="1">Terminate</button></li>
+      </ul>
+    </div>
+  </body>
+</html>

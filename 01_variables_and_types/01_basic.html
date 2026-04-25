@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internal JavaScript</title>
+
+    <script>
+      // script in head will run first
+      alert("Header alert");
+    </script>
+  </head>
+  <body>
+    <script>
+      // script in body will run after the head script
+      alert("Body alert");
+    </script>
+  </body>
+</html>
+<script>
+  // script outside of HTML tags will run after the body script
+  alert("Outside of HTML tag");
+</script>

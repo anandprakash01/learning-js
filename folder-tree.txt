@@ -1,0 +1,88 @@
+📁 learning-js
+├── 📁 01_variables_and_types
+│   ├── 📄 01_let_const_var.js
+│   ├── 📄 02_primitive_data_types.js
+│   ├── 📄 03_reference_types_and_memory.js
+│   |── 📄 04_symbols_and_bigint.js
+├── 📁 02_operators_and_math
+│   ├── 📄 01_arithmetic_and_unary.js
+│   ├── 📄 02_logical_and_nullish.js
+│   ├── 📄 03_comparison_and_coercion.js
+│   └── 📄 04_bitwise_operations.js
+├── 📁 03_strings_and_parsing
+│   ├── 📄 01_template_literals.js
+│   ├── 📄 02_string_methods.js
+│   └── 📄 03_regex_sanitization.js
+├── 📁 04_engine_mechanics
+│   ├── 📄 01_hoisting_and_tdz.js
+│   ├── 📄 02_parsing_phase.js
+│   ├── 📄 03_execution_context.js
+│   └── 📄 04_jit_compilation_turbofan.js
+├── 📁 05_scope_and_context
+│   ├── 📄 01_lexical_environment.js
+│   ├── 📄 02_scope_chain.js
+│   ├── 📄 03_implicit_this.js
+│   ├── 📄 04_explicit_this_binding.js
+│   └── 📄 05_global_environment.js
+├── 📁 06_control_flow
+│   ├── 📄 01_early_returns_and_guards.js
+│   ├── 📄 02_switch_dictionaries.js
+│   └── 📄 03_iteration_protocols.js
+├── 📁 07_data_structures
+│   ├── 📄 01_arrays.js 
+│   ├── 📄 02_objects.js 
+│   ├── 📄 03_destructuring.js 
+│   ├── 📄 04_spread_and_rest.js 
+│   ├── 📄 05_maps.js 
+│   └── 📄 06_sets.js 
+├── 📁 08_functions
+│   ├── 📄 01_declarations_vs_expressions.js
+│   ├── 📄 02_arrow_functions.js
+│   ├── 📄 03_callbacks_closures.js
+│   ├── 📄 04_higher_order_functions.js
+│   └── 📄 05_map_filter_reduce.js
+│   └── 📄 06_iife_and_modules.js
+├── 📁 09_oop 
+│   ├── 📄 01_constructor_functions.js
+│   ├── 📄 02_prototypes.js
+│   ├── 📄 03_prototype_chain.js
+│   ├── 📄 04_es6_classes.js
+│   └── 📄 05_inheritance_and_super.js
+├── 📁 10_functional
+│   ├── 📄 01_pure_functions.js
+│   ├── 📄 02_immutability.js
+│   ├── 📄 03_currying.js
+│   └── 📄 04_composition.js
+├── 📁 11_resilience
+│   ├── 📄 01_try_catch_finally.js
+│   ├── 📄 02_throw_and_custom_errors.js
+│   └── 📄 03_error_boundaries.js
+├── 📁 12_modularity
+│   ├── 📄 01_commonjs_require.js
+│   ├── 📄 02_esm_named_exports.js
+│   └── 📄 03_esm_default_exports.js
+│   └── 📄 moduleExports_commonJS.js
+│   └── 📄 moduleExports_ESM.js
+├── 📁 13_concurrency
+│   ├── 📄 01_call_stack_and_web_apis.js
+│   ├── 📄 02_event_loop_priorities.js
+│   ├── 📄 03_promises.js
+│   └── 📄 04_async_await.js
+├── 📁 14_memory_performance
+│   ├── 📄 01_call_stack_and_heap_physics.js
+│   ├── 📄 02_memory_lifecycle.js
+│   ├── 📄 03_mark_and_sweep_gc.js
+│   └── 📄 04_memory_leaks.js
+├── 📁 15_dom_architecture
+│   ├── 📄 01_selection_and_nodes.js
+│   ├── 📄 02_traversal_and_manipulation.js
+│   ├── 📄 03_event_listeners.js
+│   ├── 📄 04_event_delegation.js
+│   └── 📄 05_reflow_and_repaint.js
+├── 📁 16_network_and_storage
+│   ├── 📄 01_fetch_api_and_cors.js
+│   └── 📄 02_local_and_session_storage.js
+├── 📁 17_production
+│   ├── 📄 01_unit_testing_basics.js
+│   ├── 📄 02_mocking_and_spies.js
+│   └── 📄 03_telemetry_and_logging.js
