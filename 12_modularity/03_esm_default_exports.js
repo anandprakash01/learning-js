@@ -1,6 +1,7 @@
 // ==========================================
 // PART I: THE DEFAULT EXPORT PHYSICS
 // ==========================================
+// commonJS does not have “default export”
 // Every ES Module is allowed to have EXACTLY ONE "Default" export.
 // It signals to the engine: "This is the primary payload of this file."
 

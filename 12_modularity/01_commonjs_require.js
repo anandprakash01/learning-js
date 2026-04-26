@@ -1,4 +1,3 @@
-// As an application scales from one file to one thousand files, you can no longer keep all your code in a single global memory space. You need a way to split your application into microscopic, isolated vaults (Modules) and selectively share memory between them.
 // Historically, JavaScript had no built-in module system. When Ryan Dahl created Node.js in 2009, he had to invent one from scratch so developers could build servers. He chose a standard called CommonJS.
 
 // ==========================================
@@ -54,8 +53,28 @@ module.exports = {
 // 2. Wraps it in the IIFE and executes it.
 // 3. Returns whatever was attached to `module.exports`.
 
-// Destructuring to pull exactly what we need out of the exported object.
+// require() (CommonJS) — No extension needed
+// Node uses a module resolution algorithm.
 
+// When you write: require("./utils/logger");
+// Node tries in this order:
+// 1. ./utils/logger.js
+// 2. ./utils/logger.json
+// 3. ./utils/logger.node (native addon)
+// 4. ./utils/logger/index.js
+
+// Internal behavior
+// require("x")
+//  ↓
+// resolveFilename()
+//  ↓
+// try extensions in order
+//  ↓
+// cache result
+//  ↓
+// execute module wrapper
+
+// Destructuring to pull exactly what we need out of the exported object.
 // const {connect: connectDB} = require("./moduleExports_commonJS.js");
 const {connect: connectDB} = require("./moduleExports_commonJS");
 connectDB("");

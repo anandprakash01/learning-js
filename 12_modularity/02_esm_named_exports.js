@@ -33,6 +33,8 @@ export {version};
 
 // We use the `import` keyword to reach into the module and grab the exact pointers we need.
 
+// CRITICAL RULE FOR ESM IN NODE: When you import a file you created, you must include the .js extension (e.g., import from './file.js'). React lets you skip the .js because a tool called Webpack fills it in for you. Node.js does not guess. You must be explicit.
+
 // We MUST use the exact same variable names. This is not destructuring;
 // it is a Static Binding.
 import {connect_module, maxConnections_module} from "./moduleExports_ESM.js";
