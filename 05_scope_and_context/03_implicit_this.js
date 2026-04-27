@@ -1,6 +1,6 @@
 // The "this" uses Dynamic Scoping. It does not care where the function was written. It only cares about how the function is called at runtime. The engine recalculates the value of this every single time the function is executed.
 
-// There are 4 rules for how this is calculated. Today, we cover the most common one: Implicit Binding.
+// There are 4 rules for how this is calculated. we cover the most common one: Implicit Binding.
 // The Golden Rule of Implicit Binding:
 // At the exact moment a function is invoked, look at the code. If there is a dot . immediately before the function name, the object to the left of that dot becomes this. If there is no dot, the engine panics and defaults to the Global Object (which usually causes undefined errors).
 

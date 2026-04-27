@@ -36,6 +36,7 @@ console.log("===== Fatal Omission (Forgetting `new`)");
 // Step 2 (`this` binding) defaults to the Global Object (`window` or `global`).
 
 const buggyNode = ServerNode("10.0.0.5", 8080); // We forgot 'new'!
+// this will give error in type:"module": TypeError: Cannot set properties of undefined (setting 'ip')
 
 console.log("Buggy Node: ", buggyNode); // undefined (Because the function didn't return anything)
 console.log(global.ip); // "10.0.0.5" (CATASTROPHE: We just mutated the Global Environment!)
@@ -76,3 +77,26 @@ db3.connect(); // Connecting to Logs...
 
 // If you are building a video game with 10,000 enemies, and each enemy has an attack() function, your game will lag and crash because of 10,000 duplicate functions filling up the RAM.
 // To fix this, we have to move the method OUT of the object and put it somewhere that all 10,000 instances can share it dynamically. That "shared space" is called the Prototype.
+
+// Era 1: The Wild West (Pre-ES5 / Non-Strict Mode)
+// You write a constructor function:
+// function Router() { this.routes = []; }
+
+// If you use new Router(): The V8 engine creates a brand new, empty object {} in memory, points this to that empty object, and attaches .routes to it. It is perfectly contained.
+
+// If you forget new and write Router(): The V8 engine panics. It needs an object to attach .routes to. Because it doesn't have one, it defaults to the Global Object (window in the browser, global in Node.js). global.routes = []
+
+// Era 2: The Safety Net (ES5 "use strict")
+// Engineers realized Era 1 was too dangerous. They introduced "use strict".
+
+// If you write Router() without new inside Strict Mode, the V8 engine refuses to default to the Global Object. Instead, it forcefully sets this to undefined.
+
+// The Result: When the engine tries to run this.routes = [], it throws a massive error: TypeError: Cannot set properties of undefined.
+// This is better than Era 1 because the app crashes immediately (Fail-Fast), rather than failing silently.
+
+// Era 3: The Modern Wall (ES6 Classes & ESM)
+// First, ES Modules (import/export) are locked into Strict Mode by default. You don't even have to type "use strict" anymore.
+
+// Second, modern JavaScript uses the class keyword.
+
+// The Result: If you write class Router {} and try to call Router() without new, the V8 engine doesn't even bother with this. It instantly blocks the execution and throws: TypeError: Class constructor cannot be invoked without 'new'.
